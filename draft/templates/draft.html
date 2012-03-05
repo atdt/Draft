@@ -2,9 +2,9 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8">
     <title>draft</title>
-    <link rel=stylesheet href=/static/css/bootstrap.css>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
     <style>
       html, body { background: #f0f0f0; }
       body       { width: 640px; margin: 30px auto; }
@@ -15,14 +15,14 @@
     <pre></pre>
 
     <!-- draft helpers -->
-    <script src=/static/js/draft.js></script>
+    <script src="/static/js/draft.js"></script>
 
     <!-- standard libraries -->
-    <script src=/static/js/jquery.js></script>
-    <script src=/static/js/sprintf.js></script>
-    <script src=/static/js/underscore.js></script>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/sprintf.js"></script>
+    <script src="/static/js/underscore.js"></script>
 
     {% if script %}
     <!-- user-supplied -->
-    <script src={{ script }}></script>
+    <script src="/cwd/{{ script }}"></script>
     {% endif %}
