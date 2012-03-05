@@ -9,8 +9,13 @@
 """
 import os
 
-from draft import Draft
-from flask import render_template
+from flask import Flask, render_template
+from werkzeug import SharedDataMiddleware
+
+
+class Draft(Flask):
+    def mount(self, dir, mountpoint):
+        self.wsgi_app = SharedDataMiddleware(self.wsgi_app, {dir: mountpoint})
 
 app = Draft(__name__)
 app.mount('/cwd/', os.getcwd())
