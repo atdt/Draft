@@ -40,6 +40,8 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
         'Topic :: Software Development'
     ),
+    include_package_data=True,
+    zip_safe=False,
     install_requires=('flask>=0.8'),
     url='https://github.com/atdt/draft',
     test_suite = 'draft.tests',
