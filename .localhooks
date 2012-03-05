@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+function cleanup () {
+    for dir in 'dist' 'draft.egg-info' 'build'; do
+        rm -rf ${dir};
+    done
+}
