@@ -23,6 +23,6 @@ app.mount('/cwd/', os.getcwd())
 @app.route('/')
 @app.route('/<script>/')
 def draft(script=None):
-    if not script.endswith('.js'):
+    if script is not None and not script.endswith('.js'):
         script += '.js'
     return render_template('draft.html', script=script)
